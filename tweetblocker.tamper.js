@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tweet Blocker
 // @namespace    http://osuushi.com/
-// @version      0.1
+// @version      0.2
 // @description  Block specific tweets
 // @author       Ada Cohen
 // @match        https://twitter.com/*
@@ -106,8 +106,7 @@
         let article;
         if (node.tagName === "ARTICLE") {
           article = node;
-        }
-        if (node instanceof Element) {
+        } else if (node instanceof Element) {
           article = node.querySelector("article");
         }
 
